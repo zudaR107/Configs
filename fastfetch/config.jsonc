@@ -1,0 +1,62 @@
+{
+  // JSON Schema for validation/autocomplete in editors
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    // Use a fixed ASCII/ANSI logo file instead of a shell command
+    // Tip: keep paths relative to this config folder for portability
+    "source": "$(find $HOME/.config/fastfetch/logo/Avatar.jpg | shuf -n 1)",
+    // Logo height in terminal rows (affects scaling)
+    "height": 20
+  },
+
+  "display": {
+    // Key/value separator between module label and value
+    "separator": " : "
+  },
+
+  "modules": [
+    // Simple static text line (ANSI color escape here)
+    { "type": "custom", "format": "\u001b[36m    コンピューター" },
+    { "type": "custom", "format": "┌──────────────────────────────────────────┐" },
+
+    // {2} selects a specific formatted field from the module's output
+    { "type": "os",      "key": "  󰣇 OS",      "format": "{2}", "keyColor": "red" },
+    { "type": "kernel",  "key": "   Kernel",  "format": "{2}", "keyColor": "red" },
+
+    // If no format is given, fastfetch prints its default value set
+    { "type": "packages","key": "  󰏗 Packages","keyColor": "green" },
+
+    // Display: {1}=width, {2}=height, {3}=refresh rate, {7}=scale/name (varies)
+    { "type": "display", "key": "  󰍹 Display", "format": "{1}x{2} @ {3}Hz [{7}]", "keyColor": "green" },
+
+    { "type": "terminal","key": "   Terminal","keyColor": "yellow" },
+    { "type": "wm",      "key": "  󱗃 WM",     "format": "{2}", "keyColor": "yellow" },
+
+    { "type": "custom", "format": "└──────────────────────────────────────────┘" },
+    "break",
+
+    { "type": "title", "key": "ユーザー" },
+    { "type": "custom", "format": "┌──────────────────────────────────────────┐" },
+
+    // CPU: {1}=model, {7}=frequency string
+    { "type": "cpu", "format": "{1} @ {7}", "key": "   CPU", "keyColor": "blue" },
+
+    // GPU: {1}=vendor, {2}=model; second gpu block prints driver {3}
+    { "type": "gpu", "format": "{1} {2}", "key": "  󰊴 GPU", "keyColor": "blue" },
+    { "type": "gpu", "format": "{3}",     "key": "   GPU Driver", "keyColor": "magenta" },
+
+    { "type": "memory", "key": "   Memory ", "keyColor": "magenta" },
+
+    // Disk “age” uses the mountpoint; here just show days since creation
+    { "type": "disk", "key": "  󱦟 OS Age ", "folders": "/", "keyColor": "red", "format": "{days} days" },
+
+    { "type": "uptime", "key": "  󱫐 Uptime ", "keyColor": "red" },
+
+    { "type": "custom", "format": "└──────────────────────────────────────────┘" },
+
+    // Color palette preview; "circle" symbols require a Nerd Font
+    { "type": "colors", "paddingLeft": 2, "symbol": "circle" },
+    "break"
+  ]
+}
