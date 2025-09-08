@@ -1,3 +1,7 @@
+# fzf-powered file opener:
+# - optional initial query (ffe <query>)
+# - searches up to max_depth
+# - opens selected file in Neovim
 function ffe
     set initial_query
     if set -q argv[1]

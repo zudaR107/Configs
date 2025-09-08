@@ -1,3 +1,5 @@
+# Enhanced 'df': if a path is provided and exists, use 'duf' on that path,
+# otherwise run 'duf' for all mounts. Requires 'duf' to be installed.
 function df
     if test $argv
         set last_arg $argv[-1]

@@ -1,3 +1,8 @@
+# fzf-powered directory chooser:
+# - optional initial query (ffcd <query>)
+# - limits search depth to speed things up
+# - excludes heavy/common dirs (.git, node_modules, .venv, target, .cache)
+# - previews directories on the right
 function ffcd
     set initial_query
     set max_depth 7
@@ -15,7 +20,6 @@ function ffcd
     if set -q initial_query
         set fzf_options $fzf_options "--query=$initial_query"
     end
-
 
     set selected_dir (find . -maxdepth $max_depth \( -name .git -o -name node_modules -o -name .venv -o -name target -o -name .cache \) -prune -o -type d -print 2>/dev/null | fzf $fzf_options)
 

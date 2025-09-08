@@ -1,3 +1,6 @@
+# Yazi integration:
+# - launch 'yazi' file manager
+# - upon exit, if a new directory was chosen, cd into it
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     yazi $argv --cwd-file="$tmp"

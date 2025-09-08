@@ -1,3 +1,7 @@
+# fzf-powered "content search then open":
+# - grep recursively for a pattern
+# - preview files with 'bat' on the right
+# - open selected file in Neovim
 function ffec
     set grep_pattern ""
     if set -q argv[1]
