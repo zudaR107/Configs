@@ -1,0 +1,48 @@
+{
+  // Menu bar in Code-OSS: hidden by default, shown with Alt
+  "window.menuBarVisibility": "toggle",
+
+  // Disable vertical scrollbar in the editor
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+
+  // Workspace trust settings
+  "security.workspace.trust.untrustedFiles": "newWindow", // open untrusted files in a new window
+  "security.workspace.trust.startupPrompt": "never",      // never ask on startup
+  "security.workspace.trust.enabled": true,               // workspace trust enabled
+
+  // Disable automatic extension updates
+  "extensions.autoUpdate": false,
+
+  // External terminal (foot)
+  "terminal.external.linuxExec": "foot",
+
+  // Show terminals in both Explorer and Source Control
+  "terminal.explorerKind": "both",
+  "terminal.sourceControlRepositoriesKind": "both",
+
+  // Disable telemetry
+  "telemetry.telemetryLevel": "off",
+
+  // Disable font ligatures in the editor
+  "editor.fontLigatures": false,
+
+  // Font settings
+  "editor.fontFamily": "'Ubuntu Mono', 'monospace', 'Droid Sans Mono', 'Courier New'",
+  "editor.fontSize": 26,
+  "editor.fontWeight": "bold",
+  "editor.fontVariations": false,
+
+  // Disable delete confirmation in Explorer
+  "explorer.confirmDelete": false,
+
+  // Git: do not open repositories in parent folders
+  "git.openRepositoryInParentFolders": "never",
+
+  // Unicode: disable warnings for invisible and ambiguous characters
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+
+  // Active color theme
+  "workbench.colorTheme": "Solarized Light"
+}
