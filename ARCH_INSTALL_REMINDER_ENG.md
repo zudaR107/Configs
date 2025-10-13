@@ -141,7 +141,7 @@ Check them carefully. Move them into `~/.configs` manually. Be cautious — conf
 * **qt-creator** — Qt IDE.
 * **stm32cubemx**, **at32workbench**, **JLink** — embedded dev tools.
 * **bpython** — better Python REPL.
-* **AmneziaVPN** — you know what it’s for ;)
+* *** — you know what it’s for ;)
 
 ---
 

@@ -142,7 +142,7 @@ git clone https://github.com/zudaR107/Configs ~/sandbox/configs
 * **qt-creator** — IDE для Qt.
 * **stm32cubemx**, **at32workbench**, **JLink** — для встройки.
 * **bpython** — удобный Python REPL.
-* **AmneziaVPN** — ну вы поняли ;)
+* *** — ну вы поняли ;)
 
 ---
 
